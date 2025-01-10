@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>RIS Software</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <!-- owl stylesheets -->
+   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+      media="screen">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Registro de Enfermeras</title>
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         background-color: #f6f8f8;
+         margin: 0;
+         padding: 0;
+      }
+
+      header {
+         background-color: #4bc5b8;
+         color: white;
+         padding: 15px;
+         text-align: center;
+         font-size: 1.5rem;
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .container {
+         padding: 20px;
+         max-width: 1200px;
+         margin: 0 auto;
+      }
+
+      .card {
+         background-color: white;
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         margin-bottom: 20px;
+         padding: 20px;
+      }
+
+      .card h2 {
+         color: #4bc5b8;
+         margin-top: 0;
+      }
+
+      table {
+         width: 100%;
+         border-collapse: collapse;
+         margin-top: 10px;
+      }
+
+      table th,
+      table td {
+         padding: 10px;
+         text-align: left;
+      }
+
+      table th {
+         background-color: #4bc5b8;
+         color: white;
+      }
+
+      table tr:nth-child(even) {
+         background-color: #f6f8f8;
+      }
+
+      button {
+         background-color: #4bc5b8;
+         color: white;
+         border: none;
+         padding: 10px 20px;
+         border-radius: 5px;
+         cursor: pointer;
+         font-size: 1rem;
+      }
+
+      button:hover {
+         background-color: #37a59c;
+      }
+
+      form {
+         display: flex;
+         flex-direction: column;
+      }
+
+      form label {
+         margin: 10px 0 5px;
+         font-weight: bold;
+      }
+
+      form input,
+      form select {
+         padding: 10px;
+         border: 1px solid #ddd;
+         border-radius: 5px;
+         margin-bottom: 15px;
+      }
+
+      form input:focus,
+      form select:focus {
+         outline: none;
+         border-color: #4bc5b8;
+      }
+
+      .error {
+         color: red;
+         font-size: 0.9rem;
+         margin-top: -10px;
+         margin-bottom: 10px;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- header section start -->
+   <div class="header_section">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <div class="logo"><a href="index.html"><img src="images/logo.png" width="100px" height="100px">RIS Software</a>
+         </div>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Inicio</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="doctor.html">Doctor</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="medicamentos.html">Medicamentos</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="enfermeras.html">Enfermeras</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="facturas.html">Facturas</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Citas</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+      <div class="header_section">
+         <div class="container">
+            <!-- Enfermera Form -->
+            <div class="card">
+               <h2>Registro de Enfermeras</h2>
+               <form id="nurseForm">
+                  <label for="firstName">Nombre</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="Ingrese el nombre" required>
+                  <div id="firstNameError" class="error"></div>
+
+                  <label for="lastName">Apellido</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Ingrese el apellido" required>
+                  <div id="lastNameError" class="error"></div>
+
+                  <label for="professionalLicense">Cédula Profesional</label>
+                  <input type="text" id="professionalLicense" name="professionalLicense"
+                     placeholder="Ingrese la cédula profesional" required>
+                  <div id="professionalLicenseError" class="error"></div>
+
+                  <label for="phoneNumber">Número Telefónico</label>
+                  <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Ingrese el número telefónico"
+                     required pattern="^\d{10}$">
+                  <div id="phoneNumberError" class="error"></div>
+
+                  <button type="submit">Registrar</button>
+               </form>
+            </div>
+
+            <!-- Enfermera Records Table -->
+            <div class="card">
+               <h2>Registros de Enfermeras</h2>
+               <table>
+                  <thead>
+                     <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Cédula Profesional</th>
+                        <th>Teléfono</th>
+                     </tr>
+                  </thead>
+                  <tbody id="nurseRecords">
+                     <!-- Los registros se agregarán dinámicamente aquí -->
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+
+      <script>
+         // Script para registrar enfermeras
+         let nurseId = 1;
+         const nurseForm = document.getElementById('nurseForm');
+         const nurseRecords = document.getElementById('nurseRecords');
+
+         nurseForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Limpiar los mensajes de error anteriores
+            clearErrors();
+
+            let isValid = true;
+
+            // Obtener los valores del formulario
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const professionalLicense = document.getElementById('professionalLicense').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+
+            // Validaciones
+            if (!firstName) {
+               isValid = false;
+               document.getElementById('firstNameError').innerText = "El nombre es obligatorio.";
+            }
+            if (!lastName) {
+               isValid = false;
+               document.getElementById('lastNameError').innerText = "El apellido es obligatorio.";
+            }
+            if (!professionalLicense) {
+               isValid = false;
+               document.getElementById('professionalLicenseError').innerText = "La cédula profesional es obligatoria.";
+            }
+            if (!phoneNumber || !/^\d{10}$/.test(phoneNumber)) {
+               isValid = false;
+               document.getElementById('phoneNumberError').innerText = "El número telefónico debe tener 10 dígitos.";
+            }
+
+            if (isValid) {
+               // Crear una fila nueva para la tabla
+               const newRow = document.createElement('tr');
+               newRow.innerHTML = `
+               <td>${nurseId}</td>
+               <td>${firstName}</td>
+               <td>${lastName}</td>
+               <td>${professionalLicense}</td>
+               <td>${phoneNumber}</td>
+            `;
+
+               // Agregar la fila a la tabla
+               nurseRecords.appendChild(newRow);
+
+               // Incrementar el ID para la siguiente enfermera
+               nurseId++;
+
+               // Limpiar el formulario
+               nurseForm.reset();
+            }
+         });
+
+         function clearErrors() {
+            // Limpiar los errores
+            const errorElements = document.querySelectorAll('.error');
+            errorElements.forEach(element => element.innerText = '');
+         }
+      </script>
+</body>
+
+</html>

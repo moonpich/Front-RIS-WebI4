@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>RIS Software</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- Responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- fevicon -->
+   <link rel="icon" href="images/fevicon.png" type="image/gif" />
+   <!-- Scrollbar Custom CSS -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <!-- Tweaks for older IEs-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <!-- owl stylesheets -->
+   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+      media="screen">
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         background-color: #f6f8f8;
+         margin: 0;
+         padding: 0;
+      }
+
+      header {
+         background-color: #4bc5b8;
+         color: white;
+         padding: 15px;
+         text-align: center;
+         font-size: 1.5rem;
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .container {
+         padding: 20px;
+         max-width: 1200px;
+         margin: 0 auto;
+      }
+
+      .card {
+         background-color: white;
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         margin-bottom: 20px;
+         padding: 20px;
+      }
+
+      .card h2 {
+         color: #4bc5b8;
+         margin-top: 0;
+      }
+
+      table {
+         width: 100%;
+         border-collapse: collapse;
+         margin-top: 10px;
+      }
+
+      table th,
+      table td {
+         padding: 10px;
+         text-align: left;
+      }
+
+      table th {
+         background-color: #4bc5b8;
+         color: white;
+      }
+
+      table tr:nth-child(even) {
+         background-color: #f6f8f8;
+      }
+
+      button {
+         background-color: #4bc5b8;
+         color: white;
+         border: none;
+         padding: 10px 20px;
+         border-radius: 5px;
+         cursor: pointer;
+         font-size: 1rem;
+      }
+
+      button:hover {
+         background-color: #37a59c;
+      }
+
+      form {
+         display: flex;
+         flex-direction: column;
+      }
+
+      form label {
+         margin: 10px 0 5px;
+         font-weight: bold;
+      }
+
+      form input,
+      form select {
+         padding: 10px;
+         border: 1px solid #ddd;
+         border-radius: 5px;
+         margin-bottom: 15px;
+      }
+
+      form input:focus,
+      form select:focus {
+         outline: none;
+         border-color: #4bc5b8;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- header section start -->
+   <div class="header_section">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <div class="logo"><a href="index.html"><img src="images/logo.png" width="100px" height="100px">RIS Software</a>
+         </div>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Inicio</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="doctor.html">Doctor</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="medicamentos.html">Medicamentos</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="enfermeras.html">Enfermeras</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="facturas.html">Facturas</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Citas</a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+
+      <div class="container">
+         <!-- Item List -->
+         <div class="card">
+            <h2>Almacenamiento</h2>
+            <table id="medicineTable">
+               <thead>
+                  <tr>
+                     <th>ID</th>
+                     <th>Medicamento</th>
+                     <th>Descripcion</th>
+                     <th>Precio</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>1</td>
+                     <td>Paracetamol</td>
+                     <td>Pain reliever</td>
+                     <td>$5.00</td>
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>Ibuprofeno</td>
+                     <td>Anti-inflamatorio</td>
+                     <td>$7.50</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+
+         <!-- Add New Medicine -->
+         <div class="card">
+            <h2>Agregar Nuevo Medicamento</h2>
+            <form id="addMedicineForm">
+               <label for="medicineName">Nombre de Medicina</label>
+               <input type="text" id="medicineName" name="medicineName" placeholder="Ingrese nombre de medicina"
+                  required>
+
+               <label for="medicineDescription">Descripción</label>
+               <input type="text" id="medicineDescription" name="medicineDescription" placeholder="Ingrese descripción"
+                  required>
+
+               <label for="medicinePrice">Precio</label>
+               <input type="number" id="medicinePrice" name="medicinePrice" placeholder="Ingrese precio" required>
+
+               <button type="submit">Agregar</button>
+            </form>
+         </div>
+      </div>
+
+      <script>
+         document.getElementById('addMedicineForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get values from form fields
+            const medicineName = document.getElementById('medicineName').value;
+            const medicineDescription = document.getElementById('medicineDescription').value;
+            const medicinePrice = document.getElementById('medicinePrice').value;
+
+            // Generate new ID for medicine
+            const table = document.getElementById('medicineTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+
+            // Add cells to new row
+            const cellId = newRow.insertCell(0);
+            const cellName = newRow.insertCell(1);
+            const cellDescription = newRow.insertCell(2);
+            const cellPrice = newRow.insertCell(3);
+
+            // Set values for new row
+            const newId = table.rows.length + 1;
+            cellId.textContent = newId;
+            cellName.textContent = medicineName;
+            cellDescription.textContent = medicineDescription;
+            cellPrice.textContent = `$${medicinePrice}`;
+
+            // Clear the form fields
+            document.getElementById('medicineName').value = '';
+            document.getElementById('medicineDescription').value = '';
+            document.getElementById('medicinePrice').value = '';
+         });
+      </script>
+</body>
+
+</html>
